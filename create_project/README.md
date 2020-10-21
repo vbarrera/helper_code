@@ -33,6 +33,8 @@ Authenticate to github:
 
 `gh auth login` (recommended: If you're on a server, follow instructions to generate a token).
 
+`gh auth login --with-token < mytoken.txt`
+
 Set ssh as git protocol. This will allow the use of ssh key. If you have not specified it during the previous step, do:
 
 `gh config set git_protocol ssh`
