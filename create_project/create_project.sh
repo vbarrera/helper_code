@@ -41,13 +41,15 @@ else
   exit 1
 fi
 
-echo -n "Do you want to create a GitHub repo? [Y/N]"
+echo -n "Do you want to create a GitHub repository? [Y/N]"
 read gh_repo
+echo -n "Indicate github user or organization" [hbc/vbarrera]
+read github_id
 if [ ${gh_repo} == Y ]; then
-   echo "Creating github repo"
+   echo "Creating github repository: $github_id/${project_name}"
    pushd ${project_name}
    git init
-   gh repo create hbc/${project_name}
+   gh repo create $github_id/${project_name}
    popd
 else
    exit 1 
