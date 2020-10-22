@@ -29,6 +29,11 @@ Check version:
 `gh --version`
 
 
+## Note on linux server:
+
+If brew doesn't work, download binary from https://github.com/cli/cli/releases and add binary to your PATH.
+
+
 Authenticate to github:
 
 `gh auth login` (recommended: If you're on a server, follow instructions to generate a token).
