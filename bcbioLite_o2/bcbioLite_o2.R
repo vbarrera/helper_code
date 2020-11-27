@@ -1,10 +1,10 @@
 
 # Check if bcbioLite is installed. If not, install it with all upgrades.
 if("remotes" %in% rownames(installed.packages())){
-  library(bcbioLite)
+  library(remotes)
 } else{
   install.packages("remotes")
-  library(bcbioLite)
+  library(remotes)
 }
 
 if("bcbioLite" %in% rownames(installed.packages())){
