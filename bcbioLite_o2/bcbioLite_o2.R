@@ -14,15 +14,18 @@ if("bcbioLite" %in% rownames(installed.packages())){
   library(bcbioLite)
 }
 
-project_dir <- commandArgs(trailingOnly=T)[1]
-output_dir <- commandArgs(trailingOnly=T)[1]
-output_dir <- normalizePath(output_dir)
+project_dir <- commandArgs()[1]
+output_dir <- commandArgs()[2]
 
 invisible(mapply(
   FUN = dir.create,
   list(output_dir),
   MoreArgs = list(recursive = TRUE, showWarnings = FALSE)
 ))
+
+output_dir <- normalizePath(output_dir)
+
+
 
 se <- bcbioLite::bcbreader(project_dir)
 
