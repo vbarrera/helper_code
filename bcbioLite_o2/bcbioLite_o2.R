@@ -14,8 +14,8 @@ if("bcbioLite" %in% rownames(installed.packages())){
   library(bcbioLite)
 }
 
-project_dir <- commandArgs()[1]
-output_dir <- commandArgs()[2]
+project_dir <- commandArgs(trailingOnly=T)[1]
+output_dir <- commandArgs(trailingOnly=T)[2]
 
 invisible(mapply(
   FUN = dir.create,
